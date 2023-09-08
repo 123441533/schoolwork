@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Selection</title>
+    <style>
+       {
+            background-image:"https://img.freepik.com/free-photo/pink-sky-background-with-crescent-moon_53876-129048.jpg"; 
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            font-family: Arial, sans-serif; 
+        }
+        .container {
+            text-align: center;
+            padding: 100px;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #763baa;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body bgcolor="purple">
+       <div class="container">
+        <h1>Select Your Subject</h1>
+        <form action="#" method="post" id="subjectForm">
+            <label for="subjects">Choose a Subject:</label>
+            <select id="subjects" name="subject">
+                <option value="hindi">Hindi</option>
+                <option value="english">English</option>
+                <option value="maths">Maths</option>
+                <option value="sst">SST (Social Studies)</option>
+                <option value="sci">Science</option>
+                <option value="computer">Computer Science</option>
+            </select>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('subjectForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the form from submitting
+            const selectedSubject = document.getElementById('subjects').value;
+            
+            
+            switch (selectedSubject) {
+                 case 'hindi':
+                    window.location.href = 'file:///C:/Users/401124/Desktop/HTML%20PROJECT/HINDI%20PAGE.html';
+                    break;
+                 case 'sci':
+                    window.location.href = 'file:///C:/Users/401124/Desktop/HTML%20PROJECT/sci.html';
+                    break;
+                 case 'sst':
+                    window.location.href = 'file:///C:/Users/401124/Desktop/HTML%20PROJECT/SST.html';
+                    break;
+                 case 'computer':
+                    window.location.href = 'file:///C:/Users/401124/Desktop/HTML%20PROJECT/computer.html';
+                    break;
+                 case 'maths':
+                    window.location.href = 'file:///C:/Users/401124/Desktop/HTML%20PROJECT/MATHS%20PAGE.html';
+                    break;
+                 case 'english':
+                    window.location.href = 'file:///C:/Users/401124/Desktop/HTML%20PROJECT/ENGLISH%20PAGE.html';
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>
+
